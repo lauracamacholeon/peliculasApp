@@ -1,0 +1,45 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+exports.__esModule = true;
+exports.ComponentsModule = void 0;
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var navbar_component_1 = require("./navbar/navbar.component");
+var router_1 = require("@angular/router");
+var slider_component_1 = require("./slider/slider.component");
+var peliculas_poster_component_1 = require("./peliculas-poster/peliculas-poster.component");
+var ng_starrating_1 = require("ng-starrating");
+var cast_slider_component_1 = require("./cast-slider/cast-slider.component");
+var ComponentsModule = /** @class */ (function () {
+    function ComponentsModule() {
+    }
+    ComponentsModule = __decorate([
+        core_1.NgModule({
+            declarations: [
+                navbar_component_1.NavbarComponent,
+                slider_component_1.SliderComponent,
+                peliculas_poster_component_1.PeliculasPosterComponent,
+                cast_slider_component_1.CastSliderComponent
+            ],
+            imports: [
+                common_1.CommonModule,
+                router_1.RouterModule,
+                ng_starrating_1.RatingModule,
+            ],
+            // debo exportarlo para poder usarlo fuera de este modulo
+            exports: [
+                navbar_component_1.NavbarComponent,
+                slider_component_1.SliderComponent,
+                peliculas_poster_component_1.PeliculasPosterComponent,
+                cast_slider_component_1.CastSliderComponent
+            ]
+        })
+    ], ComponentsModule);
+    return ComponentsModule;
+}());
+exports.ComponentsModule = ComponentsModule;

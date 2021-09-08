@@ -1,0 +1,32 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide img-fluid" *ngFor="let pelicula of peliculas" [ngStyle]="{'background-size': 'cover',
+        'background-image':'url(https://image.tmdb.org/t/p/original' + pelicula.backdrop_path+ ')' ,
+        'background-repeat': 'no-repeat' }">
+            <div class="movie-description">
+                <h3>{{ pelicula.title }}</h3>
+
+                <p> {{ pelicula.overview | slice:0:200 }}...</p>
+                <div class="detalles">
+                    <p> {{ pelicula.vote_average }}/10 <i style="color: yellow;" class="fas fa-star"></i> </p>
+
+                    <p> {{ pelicula.release_date | date: 'yyyy'}} </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev" (click)="slideAnterior()"></div>
+    <div class="swiper-button-next" (click)="slideSiguiente()"></div>
+
+
+</div>

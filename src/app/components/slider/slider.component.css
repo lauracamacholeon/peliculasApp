@@ -1,0 +1,38 @@
+.swiper-container {
+    height: 500px;
+    max-width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 50px;
+}
+
+.contenedorSlider {
+    max-width: 80%;
+}
+
+.detalles {
+    display: flex;
+    column-gap: 20px;
+}
+
+.movie-description {
+    /* background-color: rgba(189, 76, 85, 0.3); */
+    background: linear-gradient(90deg, rgba(39, 42, 54, 0.8) 0%, rgba(39, 42, 54, 0.8) 35%, rgba(189, 76, 95, 0.8) 100%);
+    bottom: 0;
+    padding: 10px 30px;
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.movie-description h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.movie-description p {
+    font-size: 18px;
+}

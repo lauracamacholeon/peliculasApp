@@ -1,0 +1,77 @@
+body {
+    background-color: #14161E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contenedorSlider {
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 200;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+hr {
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #272a36;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #bd4c5f;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #bd4c5f;
+    /* creates padding around scroll thumb */
+}
+
+.navbar-brand {
+    font-weight: 200;
+    color: #bd4c5f !important;
+}
+
+.btn-outline-success {
+    border-color: #bd4c5f !important;
+    ;
+    color: #bd4c5f !important;
+    ;
+}
+
+.btn-outline-success:hover {
+    background-color: #272a36;
+    color: white !important;
+}
+
+.block {
+    display: block;
+}
+
+.imagen-border {
+    border-radius: 10px;
+}

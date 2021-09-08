@@ -1,0 +1,39 @@
+<div class="animate__animated animate__fadeIn container mt-5">
+
+    <div *ngIf="dataPelicula" class="row">
+        <div class="col-3 ">
+            <img *ngIf="dataPelicula.poster_path" class="pelicula img-fluid imagen-border" src="https://image.tmdb.org/t/p/original/{{ dataPelicula.poster_path }} " alt=" ">
+            <img *ngIf="!dataPelicula.poster_path" class="pelicula img-fluid" src="assets/no-image.jpg " alt=" ">
+
+        </div>
+
+        <div class="col-9 ">
+            <h3 class="fw-bold"> {{ dataPelicula.title }} ({{ dataPelicula.release_date }}) </h3>
+            <div class="row">
+                <star-rating class="col-2" size="14px" [value]="(dataPelicula.vote_average*5)/10" uncheckedcolor="grey" checkedcolor="yellow" [totalstars]="5" readOnly="false"></star-rating>
+                <p class="col-10" style="color: yellow;"> {{ dataPelicula.vote_average*5 / 10 | number:'1.2-2'}}/5</p>
+            </div>
+            <span [ngStyle]="{'margin-right': '10px'}" *ngFor="let generos of dataPelicula.genres" class="badge bg-warning text-dark">{{ generos.name }}</span>
+            <p class="mt-3"> {{ dataPelicula.overview }} </p>
+
+
+            <!-- aqui ira el slider cast -->
+
+            <div class="" *ngIf="actores.length>0">
+                <app-cast-slider [cast]="actores"></app-cast-slider>
+
+            </div>
+
+
+            <div class="row mt-3 mb-5">
+                <div class="col">
+                    <button class="btn" (click)="regresar()" style="background-color:#bd4c5f; color: white;">Regresar</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
